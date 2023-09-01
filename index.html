@@ -4,16 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>Swoz's Personal Blog</title>
-    <link rel="icon" type="image/jpg" href="Picture/icon.jpg">
+    <link rel="icon" type="image/jpg" href="image/icon.jpg">
+    <script src="js/music.js"></script>
 </head>
 
 <body>
+
     <button id="所见">所见</button>
 
     <script>
         document.getElementById("所见").addEventListener("click", function () {
-            window.location.href = "Other_Html/所见.html";
+            window.location.href = "html/所见.html";
         });
+    </script>
+
+    <audio id="bgMusic" src="" autoplay loop></audio>
+
+    <!-- 播放暂停按钮 -->
+    <button onclick="document.getElementById('bgMusic').play()">Play</button>
+    <button onclick="document.getElementById('bgMusic').pause()">Pause</button>
+
+    <script>
+        // 调用播放音乐函数
+        playBgMusic(); 
     </script>
 </body>
 
