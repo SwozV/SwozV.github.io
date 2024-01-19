@@ -1,1 +1,1 @@
-# [Swoz's Personal Blog](https://swozv.github.io)
+# [My Personal Blog](https://swozv.github.io)
