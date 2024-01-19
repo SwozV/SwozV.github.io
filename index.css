@@ -19,11 +19,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  filter: blur(10px);
-  opacity: 0.7;
+  filter: blur(5px);
+  opacity: 1;
 }
 
-/* 左边框内容栏 */
+/* 左框目录栏 */
 .left-box {
   width: 300px;
   height: calc(100% - 60px);
@@ -87,4 +87,107 @@ body {
 }
 .left-box ul li:active {
   font-size: 14px;
+}
+
+/* 右侧内容栏 */
+.right-content {
+  width: calc(100% - 390px);
+  height: calc(100% - 60px);
+  background-color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 360px;
+  border-radius: 20px;
+}
+.right-content .page {
+  margin: 20px;
+  line-height: 30px;
+  font-size: 16px;
+  height: calc(100% - 40px);
+  overflow: auto;
+  display: none;
+  animation: fadein 0.5s;
+}
+@media (max-width: 700px) {
+  .right-content {
+    display: none;
+  }
+  .right-content.show,
+  .leftnav {
+    display: block;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    left: 5px;
+    top: 5px;
+  }
+  .leftnav.hide {
+    display: none;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+.right-content .page h1,
+.right-content .page h2,
+.right-content .page h3,
+.right-content .page h4 {
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 20px;
+  position: relative;
+  line-height: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.right-content .page h2 {
+  font-size: 24px;
+}
+.right-content .page h3 {
+  font-size: 20px;
+}
+.right-content .page h4 {
+  font-size: 18px;
+}
+.right-content .page h1::before,
+.right-content .page h2::before,
+.right-content .page h3::before,
+.right-content .page h4::before {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background-color: #09f;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  border-radius: 3px;
+}
+.right-content .page p {
+  text-indent: 20px;
+}
+
+/* 超链接样式 */
+a {
+  color: #09f;
+  text-decoration: none;
+}
+a:hover {
+  color: #03f;
 }
