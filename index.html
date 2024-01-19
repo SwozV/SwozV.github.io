@@ -1,42 +1,23 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swoz's Blog</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Swoz's Personal Blog</title>
-    <style>
-        body{
-            background-color: black;
-            color:#ffffff;
-        }
-    </style>
+  <body>
+    <div class="backgound-cover"></div>
 
-    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
-    <script src="js/music.js"></script>
-</head>
-
-<body>
-
-    <!--跳转页面到‘pages/所见/所见.html’-->
-    <button id="所见">所见</button>
-    <script>
-        document.getElementById("所见").addEventListener("click", function () {
-            window.location.href = "pages/所见/所见.html";
-        });
-    </script>
-
-    <audio id="bgMusic" src="" autoplay loop></audio>
-
-    <!-- 播放暂停按钮 -->
-    <button onclick="document.getElementById('bgMusic').play()">Play</button>
-    <button onclick="document.getElementById('bgMusic').pause()">Pause</button>
-
-    <script>
-        // 调用播放音乐函数
-        playBgMusic(); 
-    </script>
-</body>
-
+    <div class="left-box">
+      <img src="images/[og]무제.jpg" alt="Swoz" />
+      <p class="name">Swoz</p>
+      <ul>
+        <li onclick="window.open('https://github.com/SwozV/')">Github</li>
+        <li onclick="location.href='pages/所见/所见.html'">所见</li>
+      </ul>
+    </div>
+  </body>
 </html>
