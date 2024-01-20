@@ -42,32 +42,37 @@
     "score": "3"
   },
   {
-    "time": "2023.8.21-23:44",
+    "time": "2023.08.21-23:44",
     "name": "The Dark Knight Rises",
     "class": "Film",
     "score": "4"
   },
   {
-    "time": "2023.8.26-22:05",
+    "time": "2023.08.26-22:05",
     "name": "The Joker",
     "class": "Comic",
     "score": "2"
   },
-  { "time": "2023.8.27-22:35", "name": "Joker", "class": "Film", "score": "3" },
   {
-    "time": "2023.8.29-23:14",
+    "time": "2023.08.27-22:35",
+    "name": "Joker",
+    "class": "Film",
+    "score": "3"
+  },
+  {
+    "time": "2023.08.29-23:14",
     "name": "Following",
     "class": "Film",
     "score": "3.5"
   },
   {
-    "time": "2023.8.31-22:47",
+    "time": "2023.08.31-22:47",
     "name": "Spider-Man",
     "class": "Film",
     "score": "4"
   },
   {
-    "time": "2023.9.5-16:55",
+    "time": "2023.09.05-16:55",
     "name": "Oppenheimer",
     "class": "Film",
     "score": "4.5"
@@ -82,7 +87,7 @@
     "time": "2023.10.06-19:45",
     "name": "Fate/Zero",
     "class": "Anime",
-    "name": "⭐5"
+    "score": "⭐5"
   },
   {
     "time": "2023.10.08-20:52",
@@ -124,7 +129,7 @@
     "time": "2023.11.05-13:07",
     "name": "進撃の巨人",
     "class": "Anime",
-    "name": "神"
+    "score": "🎆かみ🎇"
   },
   {
     "time": "2023.11.07-12:40",

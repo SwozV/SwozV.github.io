@@ -48,3 +48,25 @@ function processing() {
   }
 }
 processing();
+
+// 1. 使用fetch API获取JSON文件
+fetch("data/records.json")
+  .then((response) => response.json())
+  .then((data) => {
+    // 2. 解析JSON数据
+    const myData = JSON.parse(JSON.stringify(data));
+
+    // 3. 创建表格元素和表头
+    const table = document.getElementById("records-table");
+    const tableHeader = table.createTHead();
+    const headerRow = tableHeader.insertRow();
+    headerRow.innerHTML =
+      "<th>Time</th><th>Name</th><th>Type</th><th>Score</th>";
+
+    // 4. 将数据填充到表格中
+    for (let i = 0; i < myData.length; i++) {
+      const dataRow = table.insertRow();
+      dataRow.innerHTML = `<td>${myData[i].time}</td><td>${myData[i].name}</td><td>${myData[i].class}</td><td>${myData[i].score}</td>`;
+    }
+  })
+  .catch((error) => console.error(error));
