@@ -27,12 +27,15 @@ body {
 .left-box {
   width: 300px;
   height: calc(100% - 60px);
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.5); /* 调整背景色透明度 */
   position: absolute;
   top: 30px;
   left: 30px;
   border-radius: 20px;
   overflow: auto;
+  backdrop-filter: blur(10px); /* 应用亚克力模糊效果 */
+  -webkit-backdrop-filter: blur(10px); /* 针对旧版Safari浏览器的兼容性 */
 }
 
 .left-box img {
@@ -52,6 +55,43 @@ body {
   padding-bottom: 10px;
 }
 
+/* 社交媒体图标 */
+.social-media {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  flex-wrap: wrap; /* 允许内容换行 */
+}
+
+.social-media:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 0.1px;
+  background: transparent;
+}
+
+.social-media a {
+  position: relative;
+  margin: 0 15px; /* 调整边距以便居中展示 */
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* 使得链接内部的 SVG 和文本垂直居中 */
+  align-items: center;
+}
+
+.social-media a img {
+  width: 2rem;
+  height: auto;
+  fill: currentColor;
+}
+
+.social-media a img:hover {
+  transform: translateY(-5px);
+}
+
+/* 列表 */
 .left-box ul {
   width: 100%;
   padding-top: 20px;
@@ -101,11 +141,14 @@ body {
 .right-content {
   width: calc(100% - 390px);
   height: calc(100% - 60px);
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.5); /* 调整背景色透明度 */
   position: absolute;
   top: 30px;
   left: 360px;
   border-radius: 20px;
+  backdrop-filter: blur(10px); /* 应用亚克力模糊效果 */
+  -webkit-backdrop-filter: blur(10px); /* 针对旧版Safari浏览器的兼容性 */
 }
 
 .right-content .page {
