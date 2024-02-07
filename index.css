@@ -262,18 +262,16 @@ a:hover {
 table {
   margin: 0 auto; /* 设置表格水平居中 */
   border-collapse: collapse;
-  border: 2px solid #09f; /* 设置表格边框为蓝色 */
 }
 
 td,
 th {
   text-align: center; /* 设置单元格内的文字居中 */
   padding: 10px;
-  border: 1px solid #09f;
 }
 
 #records-table tr:first-child td,
-tr:first-child th {
+#records-table tr:first-child th {
   font-weight: bold;
   border-top: 2px solid #09f;
   border-bottom: 2px solid #09f;
@@ -281,4 +279,14 @@ tr:first-child th {
 
 #records-table td:nth-child(2) {
   font-style: italic;
+}
+
+/* 特定ID为'records-table'的表格样式 */
+#records-table {
+  border: 2px solid #09f; /* 仅设置此ID的表格边框为蓝色 */
+}
+
+#records-table td,
+#records-table th {
+  border: 1px solid #09f; /* 仅设置此ID的表格单元格边框为蓝色 */
 }
