@@ -73,3 +73,55 @@ fetch("data/records.json")
     }
   })
   .catch((error) => console.error(error));
+
+// motto
+var motto = [
+  "All tragedies erased, I see only wonders.",
+  "忘却所有悲伤，所见皆是奇迹。",
+];
+
+var motto_counter = -1;
+function g() {
+  var sayii = 0;
+  function domore(cb) {
+    var inter = setInterval(function () {
+      sayii++;
+      if (sayii > motto[motto_counter].length) {
+        clearInterval(inter);
+        cb();
+      } else {
+        document.querySelector(".motto").innerHTML = motto[
+          motto_counter
+        ].substring(0, sayii);
+      }
+    }, 80);
+  }
+  function doless(cb) {
+    var inter = setInterval(function () {
+      sayii--;
+      if (sayii < 0) {
+        clearInterval(inter);
+        cb();
+      } else {
+        document.querySelector(".motto").innerHTML = motto[
+          motto_counter
+        ].substring(0, sayii);
+      }
+    }, 80);
+  }
+
+  function dos() {
+    if (motto_counter == motto.length - 1) {
+      motto_counter = 0;
+    } else {
+      motto_counter++;
+    }
+    domore(function () {
+      setTimeout(function () {
+        doless(dos);
+      }, 2000);
+    });
+  }
+  dos();
+}
+g();

@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-CN, en">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swoz's Blog</title>
+    <meta http-equiv="Cache-Control" content="no-transform, no-siteapp" />
     <link rel="icon" href="images/[og]무제.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
-
     <!-- 背景 -->
     <div class="background-cover"></div>
 
     <!-- 左栏 -->
     <div class="left-box">
-
       <img src="images/[og]무제.jpg" alt="[og]무제" />
 
       <p class="name">Swoz</p>
+
+      <p class="motto"></p>
 
       <!-- 目录 -->
       <ul>
         <li data-class="hello">Hello</li>
         <li data-class="records">Records</li>
+        <li data-class="projects">Projects</li>
+        <li data-class="contact">Contact Me</li>
       </ul>
 
       <!-- 联系链接 -->
       <div class="social-media">
         <a href="https://github.com/SwozV/" target="_blank">
-          <img src="images/github.svg"  alt="GitHub">
+          <img src="images/github.svg" alt="GitHub" />
         </a>
         <a href="https://space.bilibili.com/391614542" target="_blank">
-          <img src="images/哔哩哔哩.svg" alt="哔哩哔哩"></img>
+          <img src="images/哔哩哔哩.svg" alt="哔哩哔哩" />
         </a>
         <a href="#" target="_blank">
-          <img src="images/gmail.svg" alt="Gmail"></img>
+          <img src="images/gmail.svg" alt="Gmail" />
         </a>
       </div>
     </div>
 
     <!-- 右栏 -->
     <div class="right-content">
-
       <!-- HELLO -->
       <div class="page hello">
         <h1>Swoz's Blog</h1>
@@ -59,8 +60,10 @@
         <table id="records-table"></table>
       </div>
 
-    </div>
+      <div class="page projects"></div>
 
+      <div class="page contact"></div>
+    </div>
   </body>
 
   <script src="index.js"></script>
