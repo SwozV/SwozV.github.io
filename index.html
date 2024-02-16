@@ -7,6 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-transform, no-siteapp" />
     <link rel="icon" href="images/[og]무제.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style/todo.css" />
   </head>
 
   <body>
@@ -60,11 +61,29 @@
         <table id="records-table"></table>
       </div>
 
-      <div class="page projects"></div>
+      <div class="page projects">
+        <h2>Things to do</h2>
+
+        <ul id="todo-list">
+          <li>
+            <input type="checkbox" checked />
+            <span class="task completed">记录表</span>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <span class="task">Projects</span>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <span class="task">Relation Graph</span>
+          </li>
+        </ul>
+      </div>
 
       <div class="page contact"></div>
     </div>
   </body>
 
   <script src="index.js"></script>
+  <script src="style/todos.js"></script>
 </html>
