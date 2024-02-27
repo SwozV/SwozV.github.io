@@ -9,7 +9,19 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.background-cover {
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.bgImg {
   width: 100%;
   height: 100%;
   background-image: url(https://www.loliapi.cn/acg/);
@@ -23,22 +35,19 @@ body {
   opacity: 1;
 }
 
-/* 左框目录栏 */
-.left-box {
+.sideBar {
   width: 300px;
   height: calc(100% - 60px);
-  /* background-color: #fff; */
-  background-color: rgba(255, 255, 255, 0.5); /* 调整背景色透明度 */
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 30px;
   left: 30px;
   border-radius: 20px;
   overflow: auto;
-  backdrop-filter: blur(10px); /* 应用亚克力模糊效果 */
-  -webkit-backdrop-filter: blur(10px); /* 针对旧版Safari浏览器的兼容性 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-
-.left-box img {
+.sideBar img {
   width: 100px;
   height: 100px;
   margin: 30px auto 20px;
@@ -46,16 +55,14 @@ body {
   box-shadow: #09f 0 1px 5px;
   border-radius: 50%;
 }
-
-.left-box p.name {
+.sideBar p.name {
   text-align: center;
   font-size: 20px;
   line-height: 30px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-
-.left-box p.motto {
+.sideBar p.motto {
   text-align: center;
   font-size: 16px;
   line-height: 30px;
@@ -63,50 +70,11 @@ body {
   color: #555;
   height: 30px;
 }
-
-/* 社交媒体图标 */
-.social-media {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  flex-wrap: wrap; /* 允许内容换行 */
-}
-
-.social-media:before {
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin: 0.1px;
-  background: transparent;
-}
-
-.social-media a {
-  position: relative;
-  margin: 0 15px; /* 调整边距以便居中展示 */
-  text-decoration: none;
-  color: inherit;
-  display: flex; /* 使得链接内部的 SVG 和文本垂直居中 */
-  align-items: center;
-}
-
-.social-media a img {
-  width: 2rem;
-  height: auto;
-  fill: currentColor;
-}
-
-.social-media a img:hover {
-  transform: translateY(-5px);
-}
-
-/* 列表 */
-.left-box ul {
+.sideBar ul {
   width: 100%;
   padding-top: 20px;
 }
-
-.left-box ul li {
+.sideBar ul li {
   padding-left: 40px;
   width: calc(100% - 50px);
   line-height: 30px;
@@ -116,15 +84,16 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
-
-.left-box ul li.act {
+.sideBar ul li a {
+  color: inherit;
+}
+.sideBar ul li.act {
   font-size: 20px;
   font-weight: 600;
 }
-
-.left-box ul li::before {
+.sideBar ul li::before {
   content: "";
-  width: 0;
+  width: 0px;
   height: 20px;
   background-color: rgb(0, 153, 255);
   position: absolute;
@@ -132,61 +101,72 @@ body {
   left: 10px;
   transition: all 0.3s;
 }
-
-.left-box ul li.act::before,
-.left-box ul li:hover::before {
+.sideBar ul li.act::before,
+.sideBar ul li:hover::before {
   width: 4px;
 }
-
-.left-box ul li:hover {
+.sideBar ul li:hover {
   font-size: 17px;
 }
-
-.left-box ul li:active {
+.sideBar ul li:active {
   font-size: 14px;
 }
 
-/* 右侧内容栏 */
-.right-content {
+.SNS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.SNS:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 0.1px;
+  background: transparent;
+}
+.SNS a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+.SNS a img {
+  width: 2rem;
+  height: auto;
+  fill: currentColor;
+}
+.SNS a img:hover {
+  transform: translateY(-5px);
+}
+
+.rightContent {
   width: calc(100% - 390px);
   height: calc(100% - 60px);
-  /* background-color: #fff; */
-  background-color: rgba(255, 255, 255, 0.5); /* 调整背景色透明度 */
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 30px;
   left: 360px;
   border-radius: 20px;
-  backdrop-filter: blur(10px); /* 应用亚克力模糊效果 */
-  -webkit-backdrop-filter: blur(10px); /* 针对旧版Safari浏览器的兼容性 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 20px;
 }
 
-.right-content .page {
+.rightContent .page {
   margin: 20px;
   line-height: 30px;
   font-size: 16px;
-  height: calc(100% - 40px);
-  overflow: auto;
-  display: none;
+  max-height: 100%;
+  overflow-y: auto;
   animation: fadein 0.5s;
-}
-
-@media (max-width: 700px) {
-  .right-content {
-    display: none;
-  }
-
-  .right-content.show,
-  .left-box {
-    display: block;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    left: 5px;
-    top: 5px;
-  }
-
-  .left-box.hide {
-    display: none;
-  }
 }
 
 @keyframes fadein {
@@ -201,24 +181,10 @@ body {
   }
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #aaa;
-}
-
-.right-content .page h1,
-.right-content .page h2,
-.right-content .page h3,
-.right-content .page h4 {
+.rightContent .page h1,
+.rightContent .page h2,
+.rightContent .page h3,
+.rightContent .page h4 {
   font-size: 28px;
   font-weight: 400;
   padding-left: 20px;
@@ -227,23 +193,19 @@ body {
   padding-bottom: 20px;
   padding-top: 10px;
 }
-
-.right-content .page h2 {
+.rightContent .page h2 {
   font-size: 24px;
 }
-
-.right-content .page h3 {
+.rightContent .page h3 {
   font-size: 20px;
 }
-
-.right-content .page h4 {
+.rightContent .page h4 {
   font-size: 18px;
 }
-
-.right-content .page h1::before,
-.right-content .page h2::before,
-.right-content .page h3::before,
-.right-content .page h4::before {
+.rightContent .page h1::before,
+.rightContent .page h2::before,
+.rightContent .page h3::before,
+.rightContent .page h4::before {
   content: "";
   width: 3px;
   height: 20px;
@@ -253,49 +215,14 @@ body {
   left: 0;
   border-radius: 3px;
 }
-
-.right-content .page p {
+.rightContent .page p {
   text-indent: 20px;
 }
 
-/* 超链接样式 */
 a {
   color: #09f;
   text-decoration: none;
 }
-
 a:hover {
   color: #03f;
-}
-
-table {
-  margin: 0 auto; /* 设置表格水平居中 */
-  border-collapse: collapse;
-}
-
-td,
-th {
-  text-align: center; /* 设置单元格内的文字居中 */
-  padding: 10px;
-}
-
-#records-table tr:first-child td,
-#records-table tr:first-child th {
-  font-weight: bold;
-  border-top: 2px solid #09f;
-  border-bottom: 2px solid #09f;
-}
-
-#records-table td:nth-child(2) {
-  font-style: italic;
-}
-
-/* 特定ID为'records-table'的表格样式 */
-#records-table {
-  border: 2px solid #09f; /* 仅设置此ID的表格边框为蓝色 */
-}
-
-#records-table td,
-#records-table th {
-  border: 1px solid #09f; /* 仅设置此ID的表格单元格边框为蓝色 */
 }
