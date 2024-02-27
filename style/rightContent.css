@@ -1,0 +1,14 @@
+.rightContent {
+  width: 72%;
+  height: calc(100% - 6%);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(100%) blur(5px);
+}
