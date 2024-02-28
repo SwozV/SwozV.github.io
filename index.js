@@ -6,15 +6,10 @@ function resize() {
 resize();
 window.addEventListener("resize", resize);
 
-// initialize url
-if (window.location.pathname === "/index.html") {
-  window.location.replace("/page/hello/index.html");
-}
-
 // motto
 var motto = [
-  "All tragedies erased, I see only wonders.",
-  "忘却所有悲伤，所见皆是奇迹。",
+  "All tragedies erased, I see only wonders",
+  "忘却所有悲伤, 所见皆是奇迹",
 ];
 var motto_counter = -1;
 function Motto() {

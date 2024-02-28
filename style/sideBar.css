@@ -1,21 +1,22 @@
 .sideBar {
-  width: 22%;
+  width: 260px;
   height: calc(100% - 6%);
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 3%;
   left: 2%;
+  right: 2%;
   overflow: auto;
   backdrop-filter: brightness(100%) blur(5px);
+  animation: fadein 1s ease-in-out forwards;
 }
 
 .sideBar img {
-  width: 40%;
-  height: auto;
-  /* Up right down left */
-  margin: 5% auto;
-  margin-bottom: 5%;
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  margin-bottom: 20px;
   display: block;
   box-shadow: #09f 0 1px 5px;
   border-radius: 50%;
@@ -23,48 +24,73 @@
 
 .sideBar p.name {
   text-align: center;
-  font-size: 2vw;
-  font-weight: 2.5rem;
-  margin-bottom: 5%;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 555;
+  padding-bottom: 10px;
   user-select: none;
 }
 
 .sideBar p.motto {
   text-align: center;
-  font-size: 1.25vw;
+  font-size: 16px;
   line-height: 30px;
   user-select: none;
   color: #555;
-  height: 5%;
+  height: 30px;
 }
 
 .sideBar ul {
   width: 100%;
-  padding-top: 5%;
+  padding-top: 20px;
+  margin-bottom: 2rem;
 }
 
 .sideBar ul li {
-  padding-left: 5%;
-  line-height: 10%;
-  margin: 10%;
+  padding-left: 40px;
+  width: calc(100% - 50px);
+  line-height: 30px;
+  margin: 5px;
   list-style: none;
   position: relative;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 1.3vw;
+  opacity: 0.9;
 }
 
 .sideBar ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  display: block;
+}
+
+.sideBar ul li.act {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sideBar ul li::before {
+  content: "";
+  width: 0px;
+  height: 20px;
+  background-color: #09f;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  transition: all 0.3s;
+}
+
+.sideBar ul li.act::before,
+.sideBar ul li:hover::before {
+  width: 4px;
 }
 
 .sideBar ul li:hover {
-  font-size: 1.5vw;
+  font-size: 17px;
 }
 
 .sideBar ul li:active {
-  font-size: 1.4px;
+  font-size: 14px;
 }
 
 /* SNS */

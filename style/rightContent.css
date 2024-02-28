@@ -1,14 +1,94 @@
 .rightContent {
-  width: 72%;
+  position: absolute;
   height: calc(100% - 6%);
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
   top: 3%;
+  left: calc(4% + 260px);
   right: 2%;
   overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   backdrop-filter: brightness(100%) blur(5px);
+  justify-content: center;
+  animation: fadein 1s ease-in-out forwards;
+  white-space: normal;
+  word-break:break-all
+}
+
+.rightContent p {
+  text-indent: 40px;
+}
+
+.rightContent h1{
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 20px;
+  position: relative;
+  line-height: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.rightContent h1::before {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background-color: #09f;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border-radius: 3px;
+}
+.rightContent h2,
+.rightContent h3,
+.rightContent h4 {
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 20px;
+  position: relative;
+  line-height: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.rightContent h2 {
+  font-size: 24px;
+}
+.rightContent h3 {
+  font-size: 20px;
+}
+.rightContent h4 {
+  font-size: 18px;
+}
+
+
+.rightContent h2::before {
+  content: "";
+  width: 3px;
+  height: 18px;
+  background-color: #09f;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border-radius: 3px;
+}
+
+.rightContent h3::before {
+  content: "";
+  width: 3px;
+  height: 16px;
+  background-color: #09f;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border-radius: 3px;
+}
+
+.rightContent h4::before {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background-color: #09f;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border-radius: 3px;
 }
