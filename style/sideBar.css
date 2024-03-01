@@ -46,7 +46,7 @@
   font-weight: 555;
   padding-bottom: 5px;
   user-select: none;
-  background: linear-gradient(to right, gray, gray) no-repeat right bottom;
+  background: linear-gradient(to right, #09f, #09f) no-repeat right bottom;
   background-size: 0 2px;
   transition: background-size 0.3s ease;
 }
