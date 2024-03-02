@@ -7,6 +7,7 @@
   width: calc(100% - 4%);
   overflow: auto;
   margin: 2%;
+  transition: all 0.3s;
 }
 
 .project-list li:hover {
