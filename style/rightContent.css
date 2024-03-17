@@ -61,3 +61,7 @@
 .rightContent table {
   animation: fadein 1s ease-in-out forwards;
 }
+
+.rightContent ul {
+  animation: fadein 1s ease-in-out forwards;
+}
