@@ -11,7 +11,7 @@
     xhr.open("GET", url, true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
-        var res = xhr.responseText; // Move this line before using res
+        var res = xhr.responseText;
         var t = res.match(/<title>[\s\S]*<\/title>/);
         if (t && t.length > 0) {
           document.title = t[0].replace("<title>", "").replace("</title>", "");
@@ -20,11 +20,10 @@
         var r = res.match(/<!-- content start -->[\s\S]*<!-- content end -->/);
         if (r && r.length > 0) {
           document.querySelector(".rightContent").innerHTML = r[0];
+          // Load CSS file
+          var cssPath = url.substring(0, url.lastIndexOf("/")) + "/index.css";
+          loadCSS(cssPath);
         }
-
-        // Load CSS file
-        var cssPath = url.substring(0, url.lastIndexOf("/")) + "/index.css";
-        loadCSS(cssPath);
       }
     };
     xhr.send();
@@ -37,6 +36,11 @@
     link.href = url;
     document.head.appendChild(link);
   }
+
+  // 确保在页面加载完成后调用updatePage函数
+  window.addEventListener("load", function () {
+    updatePage(currentURL);
+  });
 
   setInterval(function () {
     if (window.location.href !== currentURL) {
@@ -55,16 +59,6 @@
     };
   });
 })();
-
-// load css
-function loadCSS(fileName) {
-  var head = document.head || document.getElementsByTagName("head")[0];
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = fileName;
-  head.appendChild(link);
-}
 
 // Adjust page to fit window
 function resize() {
