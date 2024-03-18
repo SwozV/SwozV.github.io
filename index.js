@@ -1,3 +1,4 @@
+// Page load and jump
 (function () {
   var currentURL = window.location.href;
   var xhr = null;
@@ -20,7 +21,6 @@
         var r = res.match(/<!-- content start -->[\s\S]*<!-- content end -->/);
         if (r && r.length > 0) {
           document.querySelector(".rightContent").innerHTML = r[0];
-          // Load CSS file
           var cssPath = url.substring(0, url.lastIndexOf("/")) + "/index.css";
           loadCSS(cssPath);
         }
@@ -37,7 +37,6 @@
     document.head.appendChild(link);
   }
 
-  // 确保在页面加载完成后调用updatePage函数
   window.addEventListener("load", function () {
     updatePage(currentURL);
   });

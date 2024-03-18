@@ -13,9 +13,18 @@
   word-break: break-all;
 }
 
+.rightContent h1,
+.rightContent h2,
+.rightContent h3,
+.rightContent h4,
+.rightContent p,
+.rightContent ul,
+.rightContent table {
+  animation: fadein 1s ease-in-out forwards;
+}
+
 .rightContent p {
   text-indent: 40px;
-  animation: fadein 1s ease-in-out forwards;
 }
 
 .rightContent h1,
@@ -27,7 +36,6 @@
   line-height: 40px;
   padding-bottom: 20px;
   padding-top: 10px;
-  animation: fadein 1s ease-in-out forwards;
 }
 
 .rightContent h1 {
@@ -56,12 +64,4 @@
   position: absolute;
   left: 18px;
   border-radius: 50%;
-}
-
-.rightContent table {
-  animation: fadein 1s ease-in-out forwards;
-}
-
-.rightContent ul {
-  animation: fadein 1s ease-in-out forwards;
 }
