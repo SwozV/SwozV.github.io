@@ -1,0 +1,44 @@
+.project-list li {
+  list-style-type: none;
+  box-shadow: #87ceeb 0 1px 5px 1px;
+  border-radius: 20px;
+  position: relative;
+  height: 150px;
+  width: calc(100% - 4%);
+  overflow: auto;
+  margin: 2%;
+  transition: all 0.3s;
+}
+
+.project-list li:hover {
+  box-shadow: #09f 0 1px 10px;
+}
+
+.project-list a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* 确保<a>元素在上层 */
+  color: inherit; /* 继承父元素的文本颜色 */
+  font-size: inherit; /* 继承父元素的字体大小 */
+  text-decoration: inherit; /* 继承父元素的文本装饰 */
+}
+
+.project-title {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.project-about {
+  margin-top: 5px;
+  margin-left: 15px;
+  position: relative;
+  font-size: 14px;
+  color: #333333;
+}

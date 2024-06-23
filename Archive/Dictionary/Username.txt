@@ -1,0 +1,9 @@
+123456
+admin
+administrator
+kali
+admin_ftp
+hat
+root
+system
+lili

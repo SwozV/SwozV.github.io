@@ -1,0 +1,67 @@
+.rightContent {
+  position: absolute;
+  height: calc(100% - 6%);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 3%;
+  left: calc(4% + 260px);
+  right: 2%;
+  overflow: auto;
+  backdrop-filter: brightness(100%) blur(5px);
+  justify-content: center;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.rightContent h1,
+.rightContent h2,
+.rightContent h3,
+.rightContent h4,
+.rightContent p,
+.rightContent ul,
+.rightContent table {
+  animation: fadein 1s ease-in-out forwards;
+}
+
+.rightContent p {
+  text-indent: 40px;
+}
+
+.rightContent h1,
+.rightContent h2,
+.rightContent h3,
+.rightContent h4 {
+  padding-left: 30px;
+  position: relative;
+  line-height: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.rightContent h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.rightContent h2 {
+  font-size: 28px;
+  font-weight: 650;
+}
+
+.rightContent h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.rightContent h1::before,
+.rightContent h2::before,
+.rightContent h3::before {
+  content: "";
+  width: 6px;
+  top: 26px;
+  height: 6px;
+  background-color: #09f;
+  position: absolute;
+  left: 18px;
+  border-radius: 50%;
+}
