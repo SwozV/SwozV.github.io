@@ -1,3 +1,1 @@
-# [My Personal Blog](https://swozv.github.io)
-
-This is my personal blog!
+# [SwozV.github.io](https://swozv.github.io)
